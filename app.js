@@ -9,6 +9,12 @@ app.use(bodyParser.urlencoded({ limit: '5mb', extended: false }));
 app.use(bodyParser.json({ limit: '5mb' }));
 app.enable('trust proxy')
 
+app.set('view engine', 'pug');
+app.set('views', `${__dirname}/views`);
+
+app.use(express.static(`${__dirname}/public`));
+
+app.get('/', (req, res) => res.render('index'));
 app.get('/whoami', getWhoami);
 
 function normalizePort(val) {
