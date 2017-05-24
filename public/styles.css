@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono|Questrial');
 
 body {
   background: #ccc;
@@ -31,4 +31,28 @@ body {
   font-size: 14px;
   padding: 10px;
   word-wrap: break-word;
+}
+
+.signature {
+  color: #666;
+  font-size: 16px;
+  margin: 40px auto 30px;
+  text-align: center;
+  width: 300px;
+}
+
+.signature img {
+  border: 2px solid #aaa;
+  border-radius: 50%;
+  margin: 10px auto;
+  width: 100px;
+}
+
+.signature a,
+.signature a:hover,
+.signature a:active {
+  color: #468;
+  cursor: pointer;
+  margin: 0 5px;
+  text-decoration: none;
 }

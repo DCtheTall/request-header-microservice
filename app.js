@@ -1,13 +1,15 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const http = require('http');
+const morgan = require('morgan');
 const getWhoami = require('./get-whoami');
 
 const app = express();
 
+app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ limit: '5mb', extended: false }));
 app.use(bodyParser.json({ limit: '5mb' }));
-app.enable('trust proxy')
+app.enable('trust proxy');
 
 app.set('view engine', 'pug');
 app.set('views', `${__dirname}/views`);
